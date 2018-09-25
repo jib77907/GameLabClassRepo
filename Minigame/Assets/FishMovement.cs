@@ -14,19 +14,30 @@ public class FishMovement : MonoBehaviour
     public Text countText;
     public Text eatenText;
     public Text finishText;
-
+    public bool gameEndingMark;
+    public GameObject restartButton;
+    
 
 
     // Use this for initialization
     void Start()
     {
-        speed = 16f;
+        speed = 17.3f;
         moveSpeed = 4f;
-        turnSpeed = 138f;
+        turnSpeed = 142f;
         count = 0;
         countText.text = "Count:" + count.ToString() + "/50";
         eatenText.text = "";
         finishText.text = "";
+
+        gameEndingMark = false;
+
+        restartButton.SetActive(false);
+    }
+
+   public void RestartGame()
+    {
+       
     }
 
     // Update is called once per frame
@@ -91,8 +102,9 @@ public class FishMovement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Wall end"))
         {
-            finishText.text = "You got " + count.ToString() + " out of 50!"; //+ " out of 50!"
-
+            finishText.text = "You got " + count.ToString() + " out of 50!";
+            gameEndingMark = true;
+            restartButton.SetActive(true);
         }
 
     }
