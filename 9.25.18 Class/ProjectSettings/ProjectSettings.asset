@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: f52244e4b29be214cad49880024dd181
+  productGUID: 6d3bab133bf3da144bd546e129588370
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: FishMinigame(Web)
+  productName: 9.25.18 Class
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -648,8 +648,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 64896f6d-ba3e-4f88-8840-8e75be0686df
-  projectName: Minigame
+  cloudProjectId: 5253d24b-2719-4746-9ab0-5725d2c07426
+  projectName: 9.25.18 Class
   organizationId: leekp733
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
