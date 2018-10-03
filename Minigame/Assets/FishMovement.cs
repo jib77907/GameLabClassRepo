@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class FishMovement : MonoBehaviour
 {
-
+    public static float count;
     public float speed;
     public float moveSpeed;
     public float upforce;
     public float turnSpeed;
-    private int count;
+    //private float count;
     public Text countText;
     public Text eatenText;
     public Text finishText;
@@ -26,7 +26,7 @@ public class FishMovement : MonoBehaviour
         moveSpeed = 4f;
         turnSpeed = 142f;
         count = 0;
-        countText.text = "Count:" + count.ToString() + "/50";
+        countText.text = "Count:" + count.ToString();
         eatenText.text = "";
         finishText.text = "";
 
@@ -83,7 +83,7 @@ public class FishMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-           
+            //ScoreSystem.control.count += 1;
             SetCountText();
         }
 
@@ -91,6 +91,7 @@ public class FishMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 5;
+            //ScoreSystem.control.count += 5;
             SetCountText();
         }
 
@@ -98,6 +99,7 @@ public class FishMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count - 3;
+            //ScoreSystem.control.count -= 3;
             SetCountText();
         }
         if (other.gameObject.CompareTag("Wall end"))
@@ -110,7 +112,7 @@ public class FishMovement : MonoBehaviour
     }
     void SetCountText ()
     {
-        countText.text = "Count:" + count.ToString() + "/50";
+        countText.text = "Count:" + count.ToString();
         if (count >=50)
         {
             eatenText.text = "All Fish Eaten!";
