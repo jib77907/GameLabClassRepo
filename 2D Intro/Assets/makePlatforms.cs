@@ -20,12 +20,14 @@ public class makePlatforms : MonoBehaviour {
 
         timer += Time.deltaTime;  //timer counting up every time
 
-        if (timer >= 0.8f)   //if timer greater than 0.5, make a new platform
+        if (timer >= 0.7f)   //if timer greater than 1, make a new platform
         {
 
-          GameObject clone = Instantiate(platform, (new Vector2(Random.Range(-8f, 8f), 6f)), Quaternion.identity);   //(what, where, rotation)
-        //change size ??!!
-            clone.transform.localScale = new Vector2 (Random.Range(2f,8f), 1f);
+          GameObject clone = Instantiate(platform, (new Vector2(Random.Range(-15f, 15f), 10f)), Quaternion.identity);   //(what, where, rotation)
+                                                                                                                     
+           
+            //change size ??!!
+            clone.transform.localScale = new Vector2 (Random.Range(2.5f,10.5f), Random.Range (0.5f,0.9f));
             timer = 0;
 
         }
@@ -33,9 +35,10 @@ public class makePlatforms : MonoBehaviour {
         platforms = GameObject.FindGameObjectsWithTag("platform");       //search for all tagged with "platform", move it, and destroy it if it goes out of range
         foreach(GameObject platform in platforms)
         {
-            platform.transform.localPosition = new Vector2(platform.transform.localPosition.x, platform.transform.localPosition.y - 0.07f);
+            platform.transform.localPosition = new Vector2(platform.transform.localPosition.x, platform.transform.localPosition.y - 0.04f);
 
-            if (platform.transform.localPosition.y < -6)
+           
+            if (platform.transform.localPosition.y < -10)
             {
                 Destroy(platform);
             }

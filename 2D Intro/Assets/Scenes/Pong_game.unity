@@ -146,7 +146,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4745098, g: 0.27656507, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -161,8 +161,8 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
+  orthographic size: 8.342609
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -185,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 952584192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -240,11 +240,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4848051870297562, guid: dd52234725bfe4b49a5185e2745a66bd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 12.9
       objectReference: {fileID: 0}
     - target: {fileID: 4848051870297562, guid: dd52234725bfe4b49a5185e2745a66bd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.6
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 4848051870297562, guid: dd52234725bfe4b49a5185e2745a66bd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -272,13 +272,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4848051870297562, guid: dd52234725bfe4b49a5185e2745a66bd, type: 2}
       propertyPath: m_LocalScale.x
-      value: 7.6375
+      value: 13.270156
       objectReference: {fileID: 0}
     - target: {fileID: 61681887406501468, guid: dd52234725bfe4b49a5185e2745a66bd,
         type: 2}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 63a50190f1865a2458c2028ba2cc4472, type: 2}
+    - target: {fileID: 61681887406501468, guid: dd52234725bfe4b49a5185e2745a66bd,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488483084348926, guid: dd52234725bfe4b49a5185e2745a66bd,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488483084348926, guid: dd52234725bfe4b49a5185e2745a66bd,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.6967551
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488483084348926, guid: dd52234725bfe4b49a5185e2745a66bd,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.49247953
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd52234725bfe4b49a5185e2745a66bd, type: 2}
   m_IsPrefabAsset: 0
@@ -366,7 +386,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1631426947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8, y: -2.7, z: 0}
+  m_LocalPosition: {x: 12.3, y: 5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -398,7 +418,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.82
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

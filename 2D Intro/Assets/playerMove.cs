@@ -10,10 +10,13 @@ public class playerMove : MonoBehaviour {
 	}
 
     public float val;
+    
+    
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+       
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             GetComponent<Rigidbody2D>().AddForce(Vector3.up * val,ForceMode2D.Impulse);
         }
