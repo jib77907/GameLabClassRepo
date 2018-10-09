@@ -81,7 +81,7 @@ public class makeCollectibles : MonoBehaviour {
         GameObject go;
 
         if (diamondindex == -1)
-            go = Instantiate(diamonds[0], (new Vector2(Random.Range(-15f, 15f), Random.Range(-1.1f, 6.3f))), Quaternion.identity) as GameObject;
+            go = Instantiate(diamonds[0], (new Vector2(Random.Range(-15f, 15f), Random.Range(2f, 6.3f))), Quaternion.identity) as GameObject;
 
         else
             go = Instantiate(diamonds[diamondindex]) as GameObject;
