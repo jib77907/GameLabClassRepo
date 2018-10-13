@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ledge
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3862862529
+    locked: 0
+  - name: environment
+    uniqueID: 26456215
+    locked: 0
+  - name: player
+    uniqueID: 2924799507
+    locked: 0
+  - name: ledge
+    uniqueID: 3693918217
     locked: 0
