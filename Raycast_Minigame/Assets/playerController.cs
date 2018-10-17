@@ -29,6 +29,7 @@ public class playerController : MonoBehaviour {
 
     public float playerSpeed;
 
+   
 	// Update is called once per frame
 	void Update () {
 
@@ -43,12 +44,14 @@ public class playerController : MonoBehaviour {
         {
             transform.Translate(Vector2.right * playerSpeed);
         }
-        
+
         if (Input.GetButtonDown("Fire1"))
-       {
+        {
             Vector2 rayOrigin = this.transform.position;
             //RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.zero);
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Input.mousePosition); 
+            float dist = Vector2.Distance(rayOrigin, Input.mousePosition);
+
 
             laserLine.enabled = true;
             //laserLine.SetPosition(0, ropeEnd.position);
@@ -65,7 +68,8 @@ public class playerController : MonoBehaviour {
                 if (hit.collider != null)
                 //if (hit.collider.tag == "ledge")
                 {
-                    if (hit.collider.tag == "ledge")
+                    //if (hit.collider.tag == "ledge")
+                    if(Physics2D.Raycast(rayOrigin,Input.mousePosition,dist, 1<< LayerMask.NameToLayer ("ledge")))
                     {
                         Debug.Log(hit.collider.name);
                         //Disable Collider
@@ -73,6 +77,8 @@ public class playerController : MonoBehaviour {
                         //Movement
                         NextPosition = hit.transform.position;
                     }
+
+                    
                    
                 }
                 else

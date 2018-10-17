@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ledge
-  - bullet
-  - collide
-  - endMark
+  - wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - ledge
-  - player
+  - 
+  - 
   - 
   - 
   - 
@@ -45,15 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 3862862529
-    locked: 0
-  - name: environment
-    uniqueID: 26456215
+  - name: plane
+    uniqueID: 2273223983
     locked: 0
   - name: player
-    uniqueID: 2924799507
+    uniqueID: 206155329
     locked: 0
-  - name: ledge
-    uniqueID: 3693918217
+  - name: obstacle
+    uniqueID: 2197830661
+    locked: 0
+  - name: enemy
+    uniqueID: 4128053121
     locked: 0

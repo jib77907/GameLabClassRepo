@@ -22,7 +22,7 @@ public class BulletScript : MonoBehaviour {
 
         timer += Time.deltaTime;  //timer counting up every time
 
-        if (timer >= 0.08f)   //if timer greater than 1, make a new platform
+        if (timer >= 0.09f)   //if timer greater than 1, make a new platform
         {
 
             GameObject clone = Instantiate(bullet, (new Vector2(500f,Random.Range(-21f, 662f))), Quaternion.identity);   //(what, where, rotation)
@@ -37,7 +37,7 @@ public class BulletScript : MonoBehaviour {
         bullets = GameObject.FindGameObjectsWithTag("bullet");       //search for all tagged with "platform", move it, and destroy it if it goes out of range
         foreach (GameObject bullet in bullets)
         {
-            bullet.transform.localPosition = new Vector2(bullet.transform.localPosition.x -1f, bullet.transform.localPosition.y);
+            bullet.transform.localPosition = new Vector2(bullet.transform.localPosition.x -0.9f, bullet.transform.localPosition.y);
 
 
             if (bullet.transform.localPosition.x < -12)
