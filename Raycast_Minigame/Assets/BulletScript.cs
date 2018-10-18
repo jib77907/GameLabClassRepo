@@ -37,7 +37,7 @@ public class BulletScript : MonoBehaviour {
         bullets = GameObject.FindGameObjectsWithTag("bullet");       //search for all tagged with "platform", move it, and destroy it if it goes out of range
         foreach (GameObject bullet in bullets)
         {
-            bullet.transform.localPosition = new Vector2(bullet.transform.localPosition.x -0.9f, bullet.transform.localPosition.y);
+            bullet.transform.localPosition = new Vector2(bullet.transform.localPosition.x -0.5f, bullet.transform.localPosition.y);
 
 
             if (bullet.transform.localPosition.x < -12)
