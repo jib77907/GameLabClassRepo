@@ -42,7 +42,7 @@ public class makeColumns : MonoBehaviour
         {
             upColumn.transform.localPosition = new Vector2(upColumn.transform.localPosition.x - 0.03f, upColumn.transform.localPosition.y);
 
-            if (upColumn.transform.localPosition.x <= -1.1f && upColumn.transform.localPosition.x >= -1f)
+            if (upColumn.transform.localPosition.x >= -1.05f && upColumn.transform.localPosition.x <= -1f)
             {
                 count = count +1;
                
