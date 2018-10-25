@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour {
 
     public float playerSpeed;
-
-    public float verticalSpeed;
+    public string scene;
+    // public float verticalSpeed;
+    float xSpeed;
+    float ySpeed;
 
     private Rigidbody2D rb;
     
@@ -25,11 +28,11 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        playerSpeed = 5f;
-        verticalSpeed = 5f;
+        playerSpeed = 6f;
+        //verticalSpeed = 5f;
 
-        float xSpeed = Input.GetAxis("Horizontal") * playerSpeed;    
-        float ySpeed = rb.velocity.y; //keep velocity
+        xSpeed = Input.GetAxis("Horizontal") * playerSpeed;    
+        ySpeed = rb.velocity.y; //keep velocity
 
 
         // if (gameObject.transform.position.y < 685f)
@@ -64,11 +67,20 @@ public class playerController : MonoBehaviour {
     //debug works but objects goes through
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("wall"))
+        if (other.gameObject.CompareTag("hill"))
         {
-            Debug.Log("HIT WALL");
-            verticalSpeed = 0f;
+
+            //verticalSpeed = 0f;
+            ySpeed = 0f;
             
         }
+
+        if (other.gameObject.CompareTag("enemy"))
+        {
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        }
+
+        
+        //does sth with grass?
     }
 }

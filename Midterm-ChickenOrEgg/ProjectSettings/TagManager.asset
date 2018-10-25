@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - endLevel
+  - hill
+  - grass
+  - enemy
+  - dino
   layers:
   - Default
   - TransparentFX

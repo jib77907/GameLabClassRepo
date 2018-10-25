@@ -8,7 +8,7 @@ public class chickenController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        moveSpeed = 0.05f;
+        moveSpeed = 0.1f;
 	}
 	
 	// Update is called once per frame
