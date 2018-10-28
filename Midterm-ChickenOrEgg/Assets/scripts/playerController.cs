@@ -7,6 +7,7 @@ public class playerController : MonoBehaviour {
 
     public float playerSpeed;
     public string scene;
+    public string nextScene;
     // public float verticalSpeed;
     float xSpeed;
     float ySpeed;
@@ -28,7 +29,7 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        playerSpeed = 6f;
+        playerSpeed = 6.8f;
         //verticalSpeed = 5f;
 
         xSpeed = Input.GetAxis("Horizontal") * playerSpeed;    
@@ -81,6 +82,13 @@ public class playerController : MonoBehaviour {
         }
 
         
-        //does sth with grass?
+        
+    }
+
+   void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("endLevel")) {
+            SceneManager.LoadScene(nextScene);
+        }
     }
 }
