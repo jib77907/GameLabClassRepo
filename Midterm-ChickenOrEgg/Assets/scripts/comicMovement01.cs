@@ -11,7 +11,7 @@ public class comicMovement01 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        readSpeed = 0.023f;
+        readSpeed = 0.014f;
 	}
 	
 	// Update is called once per frame

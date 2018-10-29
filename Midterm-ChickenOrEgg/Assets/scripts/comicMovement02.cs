@@ -16,7 +16,7 @@ public class comicMovement02 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        readSpeed = 0.023f;
+        readSpeed = 0.014f;
 
         restartButton.SetActive(false);
 
