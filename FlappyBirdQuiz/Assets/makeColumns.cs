@@ -26,6 +26,7 @@ public class makeColumns : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        
 
 
         if (timer >= 2.2f)

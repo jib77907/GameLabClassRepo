@@ -11,6 +11,7 @@ public class comicMovement02 : MonoBehaviour {
     public string scene;
 
     public GameObject restartButton;
+    
 
 
 
