@@ -46,12 +46,12 @@ public class enemyScript : MonoBehaviour {
                 if (worldXPos > gameObject.transform.position.x)
                 {
                     // Facing right
-                    transform.localScale = new Vector3(-1, 1, 1);
+                    transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
                 }
                 else
                 {
                     // Facing left
-                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 }
 
             }

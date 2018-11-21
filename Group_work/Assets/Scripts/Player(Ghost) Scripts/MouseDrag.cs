@@ -23,7 +23,7 @@ public class MouseDrag : MonoBehaviour {
             if (lastMousePosition != Vector3.zero)
             {
                 Vector3 offset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - lastMousePosition;
-                this.transform.position += offset / 4;
+                this.transform.position += offset / 3;
             }
             lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
