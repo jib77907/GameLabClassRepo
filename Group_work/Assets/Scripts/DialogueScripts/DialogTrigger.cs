@@ -6,14 +6,14 @@ public class DialogTrigger : MonoBehaviour {
 
     public Dialogue dialogue;
 
+    public GameObject obtainKey;
 
-   // void Update()
-   // {
-     //   if (Input.GetKeyDown(KeyCode.W))
-      //  {
-     //      TriggerDialogue();
-      //  }
-  //  }
+    public bool haveKey;
+
+    void Start()
+    {
+        haveKey = false;
+    }
 
     public void TriggerDialogue(){
        
@@ -32,6 +32,9 @@ public class DialogTrigger : MonoBehaviour {
                 //textbox will come up
                 Debug.Log("inspect");
                 TriggerDialogue();
+
+                Destroy(obtainKey);
+                haveKey = true;
             }
         }
 

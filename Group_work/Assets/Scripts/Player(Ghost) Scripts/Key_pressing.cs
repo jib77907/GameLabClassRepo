@@ -15,7 +15,7 @@ public class Key_pressing : MonoBehaviour {
     void Start () {
         //rend = this.gameObject.transform.GetChild(0).gameObject;
         rend = GetComponent<SpriteRenderer>();
-
+   
         isShowing = true;
     }
 	
@@ -28,21 +28,21 @@ public class Key_pressing : MonoBehaviour {
             if (inHidingZone){
                 isShowing = false;
                 Debug.Log("hide");
+                rend.enabled = isShowing;
                 //enemy.GetComponent<enemyScript>().playerShowing = isShowing;
             } else {
                 isShowing = true;
                 Debug.Log("show");
+                rend.enabled = isShowing;
             }
 
             //isShowing = true;
             enemy.GetComponent<enemyScript>().playerShowing = isShowing;
-            rend.enabled = isShowing;
+            //rend.enabled = isShowing;
           }
         //}
    
     }
-
-    //void OnCollisionEnter2D(Collision2D collision)
 
     void OnTriggerStay2D(Collider2D other) {
 
