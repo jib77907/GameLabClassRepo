@@ -10,6 +10,7 @@ public class Key_pressing : MonoBehaviour {
     bool inHidingZone;
 
     public GameObject enemy;
+    public GameObject enemy2;
 
     // Use this for initialization
     void Start () {
@@ -30,7 +31,7 @@ public class Key_pressing : MonoBehaviour {
                 Debug.Log("hide");
                 rend.enabled = isShowing;
                 //enemy.GetComponent<enemyScript>().playerShowing = isShowing;
-            } else {
+            } else{
                 isShowing = true;
                 Debug.Log("show");
                 rend.enabled = isShowing;
@@ -38,6 +39,7 @@ public class Key_pressing : MonoBehaviour {
 
             //isShowing = true;
             enemy.GetComponent<enemyScript>().playerShowing = isShowing;
+            enemy2.GetComponent<enemyScript>().playerShowing = isShowing;
             //rend.enabled = isShowing;
           }
         //}
@@ -64,17 +66,6 @@ public class Key_pressing : MonoBehaviour {
             //    //rend.enabled = !rend.enabled;
 
             //}
-        }
-
-
-        if (other.CompareTag("item"))
-        {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                //inspect
-                //textbox will come up
-                Debug.Log("inspect");
-            }
         }
        
     }

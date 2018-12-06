@@ -14,10 +14,18 @@ public class MouseDrag : MonoBehaviour {
             isMouseDown = true;
         }
         if (Input.GetMouseButtonUp(0))
-        {
+       {
             isMouseDown = false;
-            lastMousePosition = Vector3.zero;
+           lastMousePosition = Vector3.zero;
         }
+       
+
+
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        
         if (isMouseDown)
         {
             if (lastMousePosition != Vector3.zero)
@@ -27,8 +35,5 @@ public class MouseDrag : MonoBehaviour {
             }
             lastMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-
-
-
     }
 }

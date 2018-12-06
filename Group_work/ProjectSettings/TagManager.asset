@@ -7,6 +7,15 @@ TagManager:
   - hidingSpot
   - item
   - Door
+  - key
+  - dragging
+  - bedroom
+  - Picture
+  - Phone
+  - Gift
+  - Note
+  - Glass
+  - GPS
   layers:
   - Default
   - TransparentFX
@@ -47,18 +56,24 @@ TagManager:
   - name: Background
     uniqueID: 3494143117
     locked: 0
+  - name: environment
+    uniqueID: 4120280757
+    locked: 0
+  - name: key
+    uniqueID: 3034364789
+    locked: 0
   - name: Objects
     uniqueID: 27141295
     locked: 0
   - name: Grim Reaper
     uniqueID: 777379589
     locked: 0
-  - name: Ghost
-    uniqueID: 2703925665
-    locked: 0
   - name: hidingSpot
     uniqueID: 1813123095
     locked: 0
   - name: item
     uniqueID: 1048555861
+    locked: 0
+  - name: Ghost
+    uniqueID: 2703925665
     locked: 0

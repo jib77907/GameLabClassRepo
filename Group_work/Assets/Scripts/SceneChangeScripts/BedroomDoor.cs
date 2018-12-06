@@ -21,7 +21,7 @@ public class BedroomDoor : MonoBehaviour {
     void OnTriggerStay2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player") && bedroomKey.GetComponent<DialogTrigger>().haveKey == true)
+        if (other.CompareTag("Player") && bedroomKey.GetComponent<KeyDialogTrigger>().haveKey == true)
         {
             if (Input.GetKeyDown(KeyCode.W))
             {

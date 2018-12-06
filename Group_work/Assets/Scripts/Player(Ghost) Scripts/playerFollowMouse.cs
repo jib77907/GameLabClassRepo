@@ -18,6 +18,7 @@ public class playerFollowMouse : MonoBehaviour {
         
         //our code for following mouse
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       
        transform.position = Vector2.Lerp(transform.position, mousePos, moveSpeed);
 
         //flipping sprite
