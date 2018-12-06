@@ -241,6 +241,9 @@ MonoBehaviour:
   haveGift: 0
   haveNote: 0
   haveGlass: 0
+  foundGPS: 0
+  car: {fileID: 0}
+  carDoor: {fileID: 0}
 --- !u!114 &114164054356464074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b208a315e68dd543b63de7f4eeafebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 1905505955942450, guid: fd6cc8e498a322f47999c5375bd751a9, type: 2}
 --- !u!114 &114369251786444220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  enemy2: {fileID: 0}
 --- !u!114 &114823501001558266
 MonoBehaviour:
   m_ObjectHideFlags: 1

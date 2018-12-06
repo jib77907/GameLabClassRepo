@@ -25,7 +25,7 @@ public class Key_pressing : MonoBehaviour {
         
 
         //if (!isShowing){
-        if(Input.GetKeyDown(KeyCode.Q)){
+        if(Input.GetKeyDown(KeyCode.H)){
             if (inHidingZone){
                 isShowing = false;
                 Debug.Log("hide");

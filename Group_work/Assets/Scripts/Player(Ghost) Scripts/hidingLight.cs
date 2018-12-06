@@ -10,6 +10,7 @@ public class hidingLight : MonoBehaviour {
     bool inHidingZone;
 
     public GameObject enemy;
+  
 
     // Use this for initialization
     void Start () {
@@ -19,7 +20,7 @@ public class hidingLight : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             if (inHidingZone)
             {

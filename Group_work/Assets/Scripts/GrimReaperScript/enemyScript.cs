@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class enemyScript : MonoBehaviour {
 
-    public string scene;
 
     public Transform target;
     public float chaseRange;
@@ -27,6 +27,8 @@ public class enemyScript : MonoBehaviour {
     float startWait;
 
     public UnityEvent OnFinishFade;
+
+    public GameObject restartText, restartButton;
 
 
     //Facing
@@ -53,6 +55,10 @@ public class enemyScript : MonoBehaviour {
         targetSpot = 0;
         distToSpot = 0.02f;
 
+
+        restartText.SetActive(false);
+        restartButton.SetActive(false);
+
     }
 
  
@@ -76,7 +82,7 @@ public class enemyScript : MonoBehaviour {
                     Vector3 localPosition = target.position - transform.position;
                     localPosition = localPosition.normalized;
                     transform.Translate(localPosition.x * Time.deltaTime * chaseSpeed, 0, localPosition.z * Time.deltaTime * chaseSpeed);
-                    chaseSpeed += 0.01f;
+                    chaseSpeed += 0.004f;
 
 
                     //flip
@@ -179,11 +185,17 @@ public class enemyScript : MonoBehaviour {
 
     }
 
+   
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (playerShowing)
         {
-            SceneManager.LoadScene(scene);
+            if (other.CompareTag("Player"))
+            {
+                restartText.SetActive(true);
+                restartButton.SetActive(true);
+            }
         }
     }
 

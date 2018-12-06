@@ -41,7 +41,7 @@ public class DialogTrigger : MonoBehaviour {
         {
 
            
-                if (Input.GetKeyDown(KeyCode.W))
+                if (Input.GetKeyDown(KeyCode.I))
                 {
                    
                     TriggerDialogue();

@@ -125,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.31163424, y: 0.09840965}
   serializedVersion: 2
-  m_Radius: 2.9942944
+  m_Radius: 2
 --- !u!95 &95457806836807386
 Animator:
   serializedVersion: 3
@@ -192,8 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de853c23af54694eb6672d6ddced2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: 
   target: {fileID: 0}
-  chaseRange: 12
+  chaseRange: 50
   HuntPlayer: 0
   playerShowing: 0
   speed: 3
