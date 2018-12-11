@@ -7,8 +7,12 @@ public class carDoor : MonoBehaviour {
 
     public GameObject gps;
 
-	// Use this for initialization
-	void Start () {
+    public Color loadToColor = Color.black;
+
+    public AudioSource carSound;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -22,9 +26,15 @@ public class carDoor : MonoBehaviour {
 
         if (other.CompareTag("Player") && gps.GetComponent<DialogTrigger>().foundGPS == true)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.I))
             {
-                SceneManager.LoadScene("GF_frontDoor");
+                if (carSound != null)
+                {
+                    carSound.Play();
+                }
+
+                Initiate.Fade("GF_frontDoor", loadToColor, 1.0f);
+                //SceneManager.LoadScene("GF_frontDoor");
             }
         }
 

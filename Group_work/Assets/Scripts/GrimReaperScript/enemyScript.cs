@@ -82,7 +82,7 @@ public class enemyScript : MonoBehaviour {
                     Vector3 localPosition = target.position - transform.position;
                     localPosition = localPosition.normalized;
                     transform.Translate(localPosition.x * Time.deltaTime * chaseSpeed, 0, localPosition.z * Time.deltaTime * chaseSpeed);
-                    chaseSpeed += 0.004f;
+                    chaseSpeed += 0.002f;
 
 
                     //flip
@@ -195,6 +195,7 @@ public class enemyScript : MonoBehaviour {
             {
                 restartText.SetActive(true);
                 restartButton.SetActive(true);
+                Destroy(other.gameObject);
             }
         }
     }

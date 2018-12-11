@@ -102,15 +102,12 @@ public class KeyDialogTrigger : MonoBehaviour
 
                     }
 
+
                 }
 
             }
         }
-        else
-        {
-            //Debug.Log("not seeing key");
-        } 
-
+      
 
     }  
 }

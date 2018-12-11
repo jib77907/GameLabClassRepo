@@ -7,9 +7,11 @@ public class BedroomDoor : MonoBehaviour {
 
     public GameObject bedroomKey;
 
-   
-	// Use this for initialization
-	void Start () {
+    public Color loadToColor = Color.black;
+
+
+    // Use this for initialization
+    void Start () {
        
 	}
 	
@@ -23,9 +25,10 @@ public class BedroomDoor : MonoBehaviour {
 
         if (other.CompareTag("Player") && bedroomKey.GetComponent<KeyDialogTrigger>().haveKey == true)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.I))
             {
-                SceneManager.LoadScene("LivingRoom");
+                Initiate.Fade("LivingRoom", loadToColor, 1.0f);
+                //SceneManager.LoadScene("LivingRoom");
             }
         }
 

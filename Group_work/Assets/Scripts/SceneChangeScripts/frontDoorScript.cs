@@ -9,6 +9,8 @@ public class frontDoorScript : MonoBehaviour {
     public GameObject elizabethKey;
     public GameObject picture, phone, gift, note, glass;
 
+    public Color loadToColor = Color.black;
+
     // Use this for initialization
     void Start () {
 		
@@ -24,9 +26,10 @@ public class frontDoorScript : MonoBehaviour {
 
         if (other.CompareTag("Player") && carKey.GetComponent<KeyDialogTrigger>().haveKey == true && elizabethKey.GetComponent<KeyDialogTrigger>().haveKey == true && picture.GetComponent<DialogTrigger>().havePicture == true && phone.GetComponent<DialogTrigger>().havePhone == true && gift.GetComponent<DialogTrigger>().haveGift == true && note.GetComponent<DialogTrigger>().haveNote == true && glass.GetComponent<DialogTrigger>().haveGlass == true)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.I))
             {
-                SceneManager.LoadScene("Outside");
+                Initiate.Fade("Outside", loadToColor, 1.0f);
+                //SceneManager.LoadScene("Outside");
             }
         }
 

@@ -192,11 +192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de853c23af54694eb6672d6ddced2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
   target: {fileID: 0}
-  chaseRange: 50
+  chaseRange: 80
   HuntPlayer: 0
-  playerShowing: 0
+  playerShowing: 1
   speed: 3
   moveSpots:
   - {fileID: 0}
@@ -206,6 +205,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  restartText: {fileID: 0}
+  restartButton: {fileID: 0}
 --- !u!114 &114625514010336502
 MonoBehaviour:
   m_ObjectHideFlags: 1

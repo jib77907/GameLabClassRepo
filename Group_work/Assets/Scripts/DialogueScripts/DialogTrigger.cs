@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogTrigger : MonoBehaviour {
 
@@ -10,9 +11,19 @@ public class DialogTrigger : MonoBehaviour {
 
     public bool foundGPS;
 
-    public GameObject car;
+    public GameObject car, message;
 
     public BoxCollider2D carDoor;
+
+    public PolygonCollider2D cheater;
+
+    public AudioSource PickupSound;
+
+    public UnityEvent OnSeeCheater;
+
+    public bool isYesButtonThere;
+
+    public UnityEvent OnSeeCorpse;
 
     void Start()
     {
@@ -25,6 +36,10 @@ public class DialogTrigger : MonoBehaviour {
         foundGPS = false;
         carDoor = car.GetComponent<BoxCollider2D>();
         carDoor.enabled = false;
+        cheater = message.GetComponent<PolygonCollider2D>();
+        cheater.enabled = true;
+
+        isYesButtonThere = false;
     }
 
     public void TriggerDialogue(){
@@ -40,11 +55,18 @@ public class DialogTrigger : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
 
-           
+         
                 if (Input.GetKeyDown(KeyCode.I))
                 {
                    
                     TriggerDialogue();
+                isYesButtonThere = true;
+
+                if (PickupSound != null)
+                {
+                    PickupSound.Play();
+                }
+
 
 
                 if (this.gameObject.CompareTag("Picture"))
@@ -98,8 +120,17 @@ public class DialogTrigger : MonoBehaviour {
                     if (foundGPS)
                     {
                         carDoor.enabled = true;
+                        cheater.enabled = false;
+                       
                     }
 
+                    OnSeeCheater.Invoke();
+
+                }
+
+                if (this.gameObject.CompareTag("corpse"))
+                {
+                    OnSeeCorpse.Invoke();
                 }
 
 

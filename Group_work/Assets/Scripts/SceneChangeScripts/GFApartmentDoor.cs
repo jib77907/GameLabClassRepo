@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GFApartmentDoor : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Color loadToColor = Color.black;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -20,9 +22,10 @@ public class GFApartmentDoor : MonoBehaviour {
 
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.I))
             {
-                SceneManager.LoadScene("GF_Room");
+                Initiate.Fade("GF_Room", loadToColor, 1.0f);
+                //SceneManager.LoadScene("GF_Room");
             }
         }
 

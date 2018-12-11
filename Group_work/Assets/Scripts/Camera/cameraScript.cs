@@ -15,7 +15,7 @@ public class cameraScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        moveSpeed = 0.65f;
+        moveSpeed = 0.70f;
         bounds = true;
 	}
 	
