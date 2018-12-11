@@ -27,22 +27,23 @@ public class Key_pressing : MonoBehaviour {
         //if (!isShowing){
         if(Input.GetKeyDown(KeyCode.H)){
             if (inHidingZone){
-                isShowing = false;
-                Debug.Log("hide");
+                //isShowing = false;
+                isShowing = !isShowing;
                 rend.enabled = isShowing;
-                //enemy.GetComponent<enemyScript>().playerShowing = isShowing;
-            } else{
-                isShowing = true;
-                Debug.Log("show");
-                rend.enabled = isShowing;
+                
             }
+            //else {
+            //    isShowing = true;
+                
+            //    rend.enabled = isShowing;
+            //}
 
-            //isShowing = true;
+            
             enemy.GetComponent<enemyScript>().playerShowing = isShowing;
             enemy2.GetComponent<enemyScript>().playerShowing = isShowing;
-            //rend.enabled = isShowing;
+          
           }
-        //}
+        
    
     }
 

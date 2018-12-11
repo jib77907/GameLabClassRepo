@@ -24,21 +24,22 @@ public class hidingLight : MonoBehaviour {
         {
             if (inHidingZone)
             {
-                isShowing = false;
+                //isShowing = false;
+                isShowing = !isShowing;
                 ghostLight.enabled = isShowing;
                 
             }
-            else
-            {
-                isShowing = true;
-                ghostLight.enabled = isShowing;
-            }
+            //else
+            //{
+            //    isShowing = true;
+            //    ghostLight.enabled = isShowing;
+            //}
 
-            //isShowing = true;
+           
             enemy.GetComponent<enemyScript>().playerShowing = isShowing;
-            //rend.enabled = isShowing;
+            
         }
-        //}
+        
 
     }
 

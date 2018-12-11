@@ -67,14 +67,14 @@ TagManager:
   - name: Objects
     uniqueID: 27141295
     locked: 0
-  - name: Grim Reaper
-    uniqueID: 777379589
-    locked: 0
   - name: hidingSpot
     uniqueID: 1813123095
     locked: 0
   - name: item
     uniqueID: 1048555861
+    locked: 0
+  - name: Grim Reaper
+    uniqueID: 777379589
     locked: 0
   - name: Ghost
     uniqueID: 2703925665
