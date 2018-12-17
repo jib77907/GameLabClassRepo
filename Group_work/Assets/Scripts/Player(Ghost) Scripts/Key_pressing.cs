@@ -54,19 +54,7 @@ public class Key_pressing : MonoBehaviour {
         {
             Debug.Log("in hiding zone");
             inHidingZone = true;
-            //if (Input.GetKeyDown(KeyCode.Q))
-            //{
-            //    //hide
-            //    Debug.Log("hiding");
-
-            //    isShowing = false;
-            //    //rend.SetActive(isShowing);
-            //    rend.enabled = false;
-            //    //gameObject.SetActive(false);
-
-            //    //rend.enabled = !rend.enabled;
-
-            //}
+            
         }
        
     }
